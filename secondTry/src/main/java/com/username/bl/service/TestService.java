@@ -6,11 +6,11 @@ import java.sql.*;
 
 public class TestService {
 
-    public static String getData(String user, String password)
+    public static String getData(String database, String user, String password)
     {
         String result = null;
         try {
-            TestController testController = new TestController("testdb", user, password);
+            TestController testController = new TestController(database, user, password);
             result = testController.getFirstEntity().getData() + " PERFECT!";
         } catch (SQLException e) {
             result = "Something is wrong. Try again pls.";

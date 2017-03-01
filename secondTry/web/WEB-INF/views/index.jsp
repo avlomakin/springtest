@@ -12,8 +12,8 @@
     <title>Title</title>
 </head>
 <h2>Input login and password to access db</h2><br/>
-<spring:form method="post"  modelAttribute="user" action="try-access">
-
+<spring:form method="post"  modelAttribute="access-data" action="try-access">
+    Database: <spring:input path="database"/><br/>
     Name: <spring:input path="name"/>   <br/>
     Password: <spring:input path="password"/>   <br/>
     <spring:button>OK</spring:button>
