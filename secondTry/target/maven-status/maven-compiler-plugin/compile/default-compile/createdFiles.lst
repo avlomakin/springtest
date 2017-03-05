@@ -1,0 +1,6 @@
+com\username\bl\service\TestService.class
+com\username\bl\DAO\TestEntity.class
+com\username\springMVC\model\AccessData.class
+com\username\bl\DAO\TestDBConnector.class
+com\username\bl\DAO\AbstractDBConnector.class
+com\username\springMVC\controller\MainController.class
