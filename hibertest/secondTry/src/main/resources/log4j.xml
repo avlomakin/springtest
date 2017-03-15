@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration debug="true" xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <appender name="error" class="org.apache.log4j.FileAppender">
+        <param name="Threshold" value="ERROR"/>
+        <param name="Encoding" value="UTF-8"/>
+        <param name="File" value="error_log.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{ISO8601} [%-5p][%-16.16t][%32.32c] - %m%n" />
+        </layout>
+    </appender>
+
+    <appender name="dbg" class="org.apache.log4j.FileAppender">
+        <param name="Encoding" value="UTF-8"/>
+        <param name="File" value="debug_log.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{ISO8601} [%-5p][%-16.16t][%32.32c] - %m%n" />
+        </layout>
+    </appender>
+
+    <root>
+        <priority value="DEBUG"/>
+        <appender-ref ref="error" />
+        <appender-ref ref="dbg"/>
+
+    </root>
+
+</log4j:configuration>
